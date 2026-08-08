@@ -128,3 +128,13 @@ body {
 .plan-features .included i { color: #10B981; }
 .plan-features .excluded { color: var(--muted); }
 .plan-features .excluded i { color: #EF4444; }
+
+/* FAQ Section */
+.faq-section { background: var(--white); }
+.accordion-item { border: 1px solid var(--border); border-radius: var(--radius) !important; margin-bottom: 0.75rem; overflow: hidden; }
+.accordion-button { font-weight: 600; color: var(--dark); background: var(--white); font-size: 0.95rem; padding: 1.25rem 1.5rem; }
+.accordion-button:not(.collapsed) { background: var(--accent); color: var(--primary); box-shadow: none; }
+.accordion-button:focus { box-shadow: none; border-color: var(--primary); }
+.accordion-button::after { filter: none; }
+.accordion-button:not(.collapsed)::after { filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(1352%) hue-rotate(207deg) brightness(97%) contrast(97%); }
+.accordion-body { color: var(--muted); font-size: 0.925rem; line-height: 1.8; padding: 1.25rem 1.5rem; background: var(--white); }
