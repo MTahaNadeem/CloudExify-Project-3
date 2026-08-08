@@ -30,4 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // ── Stats Counter (Signature Feature) ──
+    function animateCounter(el) {
+        const target = +el.dataset.target;
+        let count = 0;
+        const step = Math.ceil(target / 60);
+        const timer = setInterval(() => {
+            count += step;
+            el.textContent = Math.min(count, target);
+            if (count >= target) {
+                el.textContent = target;
+                clearInterval(timer);
+            }
+        }, 30);
+    }
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number').forEach(el => statsObserver.observe(el));
 });

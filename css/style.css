@@ -57,3 +57,12 @@ body {
 .service-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
 .service-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s; }
 .service-link:hover { gap: 10px; }
+
+/* Stats Section */
+.stats-section { background: linear-gradient(135deg, #1A73E8 0%, #1557B0 100%); position: relative; overflow: hidden; }
+.stats-section::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); }
+.stat-item { padding: 2rem 1rem; }
+.stat-value { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 2px; }
+.stat-number { color: #FFFFFF; }
+.stat-suffix { color: #93C5FD; font-size: 0.7em; }
+.stat-label { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.8); margin: 0; letter-spacing: 0.5px; }
