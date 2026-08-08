@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" style="background: linear-gradient(135deg, #f8f9fa, #e0f2fe);">
+    <!-- Abstract Tooth Graphic -->
+    <path d="M300 120 C 350 120, 400 170, 400 240 C 400 300, 360 340, 320 340 C 300 340, 300 300, 300 300 C 300 300, 300 340, 280 340 C 240 340, 200 300, 200 240 C 200 170, 250 120, 300 120 Z" fill="#0c4a6e" opacity="0.9"/>
+    <path d="M240 240 Q 300 280 360 240" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <circle cx="270" cy="190" r="14" fill="white"/>
+    <circle cx="330" cy="190" r="14" fill="white"/>
+    <!-- Accents -->
+    <circle cx="150" cy="120" r="8" fill="#0c4a6e" opacity="0.4"/>
+    <circle cx="450" cy="320" r="12" fill="#0c4a6e" opacity="0.3"/>
+    <circle cx="480" cy="140" r="6" fill="#0c4a6e" opacity="0.5"/>
+    <circle cx="180" cy="280" r="10" fill="white" opacity="0.6"/>
+</svg>
