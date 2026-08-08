@@ -66,3 +66,20 @@ body {
 .stat-number { color: #FFFFFF; }
 .stat-suffix { color: #93C5FD; font-size: 0.7em; }
 .stat-label { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.8); margin: 0; letter-spacing: 0.5px; }
+
+/* About Section */
+.about-section { background: var(--white); }
+.about-section h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; color: var(--dark); margin-bottom: 1rem; }
+.about-section p.lead { color: var(--muted); line-height: 1.8; font-size: 1rem; }
+.value-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1rem; }
+.value-item i { color: #10B981; font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
+.value-item strong { color: var(--dark); font-weight: 600; }
+.value-item p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+.doctor-card { background: var(--white); border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); border: 1px solid var(--border); text-align: center; }
+.doctor-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary); margin-bottom: 1.25rem; }
+.doctor-card h4 { font-weight: 700; color: var(--dark); margin-bottom: 0.25rem; }
+.doctor-card .title { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+.qual-badge { display: inline-block; background: var(--accent); color: var(--primary); font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 50px; margin: 0.15rem; }
+.credential-item { display: flex; align-items: center; gap: 10px; margin: 0.6rem 0; font-size: 0.875rem; color: var(--text); }
+.credential-item i { color: #F59E0B; }
+.doctor-quote { background: var(--accent); border-left: 3px solid var(--primary); border-radius: 8px; padding: 1rem; margin-top: 1rem; font-style: italic; font-size: 0.875rem; color: var(--muted); }
