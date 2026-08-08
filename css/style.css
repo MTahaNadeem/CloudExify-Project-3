@@ -32,3 +32,16 @@ body {
 .navbar-brand { font-size: 1.5rem; font-weight: 700; color: var(--primary) !important; letter-spacing: -0.5px; }
 .nav-link { font-weight: 500; color: var(--text) !important; margin: 0 0.25rem; padding: 0.5rem 0.75rem !important; border-radius: 8px; transition: all 0.2s; }
 .nav-link:hover { color: var(--primary) !important; background: var(--accent); }
+
+/* Hero Section */
+.hero-section { background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #FFFFFF 100%); padding-top: 80px; min-height: 100vh; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.hero-title { animation: fadeInUp 0.8s ease forwards; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; line-height: 1.2; color: var(--dark); }
+.hero-subtitle { animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0; animation-fill-mode: forwards; font-size: 1.1rem; color: var(--muted); line-height: 1.7; margin: 1.5rem 0; }
+.hero-section .btn { animation: fadeInUp 0.8s ease 0.4s forwards; opacity: 0; animation-fill-mode: forwards; }
+.hero-image-wrapper { position: relative; }
+.hero-image-wrapper img { border-radius: 20px; }
+.floating-card { position: absolute; bottom: 30px; left: -30px; background: white; border-radius: 12px; padding: 1rem 1.5rem; box-shadow: var(--shadow); font-weight: 600; }
+.badge-custom { background: var(--accent); color: var(--primary); font-size: 0.85rem; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 500; border: 1px solid rgba(26,115,232,0.2); }
+.trust-row { font-size: 0.85rem; color: var(--muted); margin-top: 1.5rem; }
+.trust-row span { margin-right: 1rem; color: var(--secondary); font-weight: 500; }
