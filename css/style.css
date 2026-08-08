@@ -153,3 +153,25 @@ body {
 .clinic-info-panel h6 { font-weight: 700; color: var(--dark); margin-bottom: 1rem; }
 .info-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: var(--text); }
 .info-item i { color: var(--primary); margin-top: 2px; width: 16px; flex-shrink: 0; }
+
+/* Contact Section */
+.contact-section { background: var(--light); }
+.contact-info-card { display: flex; align-items: flex-start; gap: 1rem; padding: 1.25rem; background: var(--white); border-radius: 12px; border: 1px solid var(--border); margin-bottom: 1rem; transition: box-shadow 0.2s; }
+.contact-info-card:hover { box-shadow: var(--shadow); }
+.contact-icon { width: 44px; height: 44px; background: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1rem; flex-shrink: 0; }
+.contact-label { font-weight: 600; font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.2rem; }
+.contact-value { font-size: 0.9rem; color: var(--dark); margin: 0; font-weight: 500; }
+.map-wrapper { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+
+/* Footer */
+.footer { background: var(--dark); }
+.footer h5 { color: white; font-weight: 700; margin-bottom: 1.25rem; font-size: 1rem; }
+.footer p, .footer a, .footer li { color: rgba(255,255,255,0.6); font-size: 0.875rem; text-decoration: none; }
+.footer a:hover { color: rgba(255,255,255,0.9); }
+.footer ul { list-style: none; padding: 0; }
+.footer ul li { margin-bottom: 0.6rem; }
+.footer ul li::before { content: "→ "; color: var(--primary); }
+.footer-brand { font-size: 1.5rem; font-weight: 800; color: white; margin-bottom: 0.75rem; }
+.social-btn { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: inline-flex; align-items: center; justify-content: center; color: white; text-decoration: none; margin-right: 0.5rem; transition: background 0.2s; font-size: 0.9rem; }
+.social-btn:hover { background: var(--primary); color: white; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; margin-top: 2rem; }
