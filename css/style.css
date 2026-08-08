@@ -24,4 +24,11 @@
 body {
     font-family: var(--font-main);
     color: var(--text);
+    padding-top: 76px;
 }
+
+.navbar { padding: 1rem 0; transition: all 0.3s ease; }
+.navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.1); padding: 0.6rem 0; }
+.navbar-brand { font-size: 1.5rem; font-weight: 700; color: var(--primary) !important; letter-spacing: -0.5px; }
+.nav-link { font-weight: 500; color: var(--text) !important; margin: 0 0.25rem; padding: 0.5rem 0.75rem !important; border-radius: 8px; transition: all 0.2s; }
+.nav-link:hover { color: var(--primary) !important; background: var(--accent); }
