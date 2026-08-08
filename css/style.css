@@ -138,3 +138,18 @@ body {
 .accordion-button::after { filter: none; }
 .accordion-button:not(.collapsed)::after { filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(1352%) hue-rotate(207deg) brightness(97%) contrast(97%); }
 .accordion-body { color: var(--muted); font-size: 0.925rem; line-height: 1.8; padding: 1.25rem 1.5rem; background: var(--white); }
+
+/* Booking Modal */
+.modal-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border-radius: 16px 16px 0 0; padding: 1.5rem 2rem; }
+.modal-header .btn-close { filter: brightness(0) invert(1); }
+.modal-title { font-size: 1.3rem; font-weight: 700; }
+.modal-subtitle { font-size: 0.85rem; opacity: 0.85; margin: 0; }
+.modal-content { border-radius: 16px; border: none; }
+.modal-body { padding: 2rem; }
+.form-label { font-weight: 600; font-size: 0.875rem; color: var(--dark); margin-bottom: 0.35rem; }
+.form-control, .form-select { border: 1.5px solid var(--border); border-radius: 10px; padding: 0.7rem 1rem; font-size: 0.9rem; transition: border-color 0.2s; }
+.form-control:focus, .form-select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,115,232,0.1); }
+.clinic-info-panel { background: var(--accent); border-radius: 12px; padding: 1.5rem; height: 100%; }
+.clinic-info-panel h6 { font-weight: 700; color: var(--dark); margin-bottom: 1rem; }
+.info-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: var(--text); }
+.info-item i { color: var(--primary); margin-top: 2px; width: 16px; flex-shrink: 0; }

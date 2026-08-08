@@ -618,6 +618,125 @@
     <section id="contact"></section>
     <footer id="footer"></footer>
 
+    <!-- Appointment Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h5 class="modal-title" id="bookingModalLabel"><i class="fas fa-calendar-check me-2"></i> Book an Appointment</h5>
+                        <p class="modal-subtitle">Fill in your details and we'll confirm your slot within 2 hours</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Form Column -->
+                        <div class="col-md-7 mb-4 mb-md-0">
+                            <form id="appointmentForm">
+                                <div class="mb-3">
+                                    <label for="patientName" class="form-label">Patient Name</label>
+                                    <input type="text" id="patientName" class="form-control" placeholder="Your full name">
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" id="phone" class="form-control" placeholder="+92 3XX XXXXXXX">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" id="email" class="form-control" placeholder="your@email.com">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="apptDate" class="form-label">Preferred Date</label>
+                                        <input type="date" id="apptDate" class="form-control">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="apptTime" class="form-label">Preferred Time</label>
+                                        <select id="apptTime" class="form-select">
+                                            <option value="">Select a time slot</option>
+                                            <option>09:00 AM – 10:00 AM</option>
+                                            <option>10:00 AM – 11:00 AM</option>
+                                            <option>11:00 AM – 12:00 PM</option>
+                                            <option>12:00 PM – 01:00 PM</option>
+                                            <option>02:00 PM – 03:00 PM</option>
+                                            <option>03:00 PM – 04:00 PM</option>
+                                            <option>04:00 PM – 05:00 PM</option>
+                                            <option>05:00 PM – 06:00 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="serviceType" class="form-label">Service Type</label>
+                                    <select id="serviceType" class="form-select">
+                                        <option value="">Select service type</option>
+                                        <option>General Cleaning</option>
+                                        <option>Teeth Whitening</option>
+                                        <option>Braces & Aligners</option>
+                                        <option>Root Canal</option>
+                                        <option>Dental Implants</option>
+                                        <option>Cosmetic Dentistry</option>
+                                        <option>Other / Not Sure</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label">Message (optional)</label>
+                                    <textarea id="message" class="form-control" rows="3" placeholder="Any specific concern or question?"></textarea>
+                                </div>
+                                
+                                <div id="formError" class="alert alert-danger d-none" role="alert">Please fill in all required fields correctly.</div>
+                                <div id="formSuccess" class="alert alert-success d-none" role="alert">✅ Appointment request sent! We will WhatsApp you within 2 hours to confirm your slot.</div>
+                                
+                                <button type="submit" class="btn btn-primary rounded-pill w-100 py-2">Confirm Appointment <i class="fas fa-arrow-right ms-2"></i></button>
+                            </form>
+                        </div>
+                        
+                        <!-- Clinic Info Column -->
+                        <div class="col-md-5">
+                            <div class="clinic-info-panel">
+                                <h6>SmileCare Dental Clinic</h6>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>2nd Floor, Al-Hamra Plaza, F-7 Markaz, Islamabad</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span>051-4567890</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>0321-4567890</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Mon–Sat: 10 AM – 8 PM<br>Sunday: 12 PM – 6 PM</span>
+                                </div>
+                                
+                                <p class="text-muted mt-3 mb-4" style="font-size: 0.8rem; font-style: italic;">We typically confirm within 2 hours during working hours.</p>
+                                
+                                <h6 class="mt-2">Why SmileCare?</h6>
+                                <div class="info-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>Expert Specialists</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>Painless Procedures</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                    <span>State-of-the-Art Technology</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
