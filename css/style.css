@@ -96,3 +96,17 @@ body {
 .before-tag { background: rgba(239,68,68,0.9); color: white; }
 .after-tag { background: rgba(16,185,129,0.9); color: white; }
 .overlay-label { color: white; font-size: 1rem; font-weight: 600; margin-top: 0.75rem; margin-bottom: 0; letter-spacing: 0.5px; }
+
+/* Testimonials Section */
+.testimonials-section { background: var(--white); }
+.testimonial-card { max-width: 700px; margin: 0 auto; background: var(--white); border-radius: 20px; padding: 3rem 2.5rem; box-shadow: var(--shadow); border: 1px solid var(--border); }
+.stars { color: #F59E0B; font-size: 1.4rem; letter-spacing: 3px; }
+.testimonial-quote { font-size: 1.1rem; line-height: 1.8; color: var(--text); font-style: italic; border: none; padding: 0; margin: 0; }
+.testimonial-patient { display: flex; align-items: center; gap: 1rem; }
+.patient-avatar { width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; flex-shrink: 0; }
+.patient-name { font-weight: 700; color: var(--dark); font-size: 1rem; }
+.patient-treatment { font-size: 0.85rem; color: var(--primary); font-weight: 500; }
+#testimonialsCarousel .carousel-indicators { bottom: -40px; }
+#testimonialsCarousel .carousel-indicators [data-bs-target] { background-color: var(--primary); border-radius: 50%; width: 10px; height: 10px; }
+.carousel-control-prev-icon, .carousel-control-next-icon { background-color: var(--primary); border-radius: 50%; padding: 1.2rem; background-size: 50%; }
+.testimonials-section .carousel-control-prev, .testimonials-section .carousel-control-next { width: 50px; }
