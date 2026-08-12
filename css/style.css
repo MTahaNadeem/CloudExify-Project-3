@@ -36,6 +36,8 @@ body.loaded {
 .navbar {
     padding: 1rem 0;
     transition: all 0.3s ease;
+    z-index: 1031;   /* above Bootstrap's modal backdrop (1040 is backdrop, 1050 modal) — this ensures
+                       the nav sits correctly in the stacking context while the modal renders on top */
 }
 
 .navbar.scrolled {
@@ -875,36 +877,100 @@ body.loaded {
     background: var(--white);
 }
 
-/* Booking Modal */
-.modal-header {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
-    border-radius: 16px 16px 0 0;
-    padding: 1.5rem 2rem;
+/* Booking Modal — positioning & header fix */
+
+/* Ensure modal always renders above navbar */
+.modal {
+    z-index: 1055;  /* above Bootstrap default of 1050 */
 }
 
+.modal-backdrop {
+    z-index: 1054;  /* just below .modal */
+}
+
+/* Add breathing room above/below the centered dialog on all viewport heights */
+.modal-dialog {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Rounded container — border-radius must match header's top radius exactly */
+.modal-content {
+    border-radius: 16px !important;   /* override Bootstrap's rounded-4 (8px) */
+    border: none;
+    overflow: hidden;                 /* clips children cleanly to the 16px radius */
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
+}
+
+/* Gradient header — padding and border-radius own source of truth (no Bootstrap utility overrides) */
+.modal-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark, #1557B0) 100%);
+    color: white;
+    border-radius: 0;                 /* overflow:hidden on .modal-content handles clipping */
+    border-bottom: none;
+    padding: 1.5rem 2rem 1.25rem;    /* top / sides / bottom */
+    display: flex;
+    align-items: flex-start;          /* header text block + close btn */
+    gap: 1rem;
+}
+
+/* White ✕ button, vertically centred with the first line of the title */
 .modal-header .btn-close {
     filter: brightness(0) invert(1);
+    opacity: 0.8;
+    padding: 0.25rem;
+    margin: 0;
+    flex-shrink: 0;
+    align-self: center;               /* vertically centre with title line */
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.modal-header .btn-close:hover {
+    opacity: 1;
 }
 
 .modal-title {
     font-size: 1.3rem;
     font-weight: 700;
+    line-height: 1.3;
+    color: white;
+    margin-bottom: 0.3rem;
 }
 
+/* Subtitle / subtext in the header */
+.modal-header p {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.4;
+}
+
+/* Deprecated .modal-subtitle kept for compatibility */
 .modal-subtitle {
     font-size: 0.85rem;
     opacity: 0.85;
     margin: 0;
 }
 
-.modal-content {
-    border-radius: 16px;
-    border: none;
-}
-
 .modal-body {
     padding: 2rem;
+}
+
+/* Slightly smaller margin on mobile so modal doesn't crowd the screen */
+@media (max-width: 575.98px) {
+    .modal-dialog {
+        margin: 0.75rem auto;
+    }
+
+    .modal-header {
+        padding: 1.25rem 1.25rem 1rem;
+    }
+
+    .modal-title {
+        font-size: 1.1rem;
+    }
 }
 
 .form-label {
