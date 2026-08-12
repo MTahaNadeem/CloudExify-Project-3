@@ -34,6 +34,3 @@ This project requires zero build steps and uses no framework (no React, Next.js,
    ```
    Then open `http://localhost:8000` in your browser.
 
-## Deployment
-
-Because this project is strictly static, you can deploy it instantly to Vercel, Netlify, or GitHub Pages without configuring any build commands. Simply connect your repository and deploy the root directory.
